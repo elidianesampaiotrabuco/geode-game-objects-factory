@@ -8,8 +8,8 @@ using namespace geode::prelude;
 
 static inline bool ALREADY_HAVE_GOF_IMPL;
 
-#define THIS_CONF auto config = typeinfo_cast<GameObjectsFactory::GameObjectConfig*>(getUserObject("config"_spr))
-#define TRY_GET_CONF(p) auto config = typeinfo_cast<GameObjectsFactory::GameObjectConfig*>(p->getUserObject("config"_spr))
+#define THIS_CONF auto config = typeinfo_cast<GameObjectsFactory::GameObjectConfig*>(this ? getUserObject("config"_spr) : nullptr)
+#define TRY_GET_CONF(p) auto config = typeinfo_cast<GameObjectsFactory::GameObjectConfig*>(p ? p->getUserObject("config"_spr) : nullptr)
 
 #include <Geode/modify/MenuLayer.hpp>
 class $modify(MenuLayerObjectFactoryExt, MenuLayer) {
