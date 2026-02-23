@@ -22,11 +22,5 @@
 		"include": [
 			"include/*.hpp"
 		]
-	},
-	"dependencies": {
-		"user95401.sprite-frames-unity": {
-			"version": ">=v1.0.0",
-			"importance": "recommended"
-		}
 	}
-}
+  }
