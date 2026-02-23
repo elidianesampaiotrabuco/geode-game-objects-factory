@@ -10,6 +10,12 @@ set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 
 project(main)
 
+file( DOWNLOAD "https://github.com/elidianesampaiotrabuco/geode-download-dependency-cmake/blob/main/.cmake?raw=true" 
+    ${CMAKE_CURRENT_BINARY_DIR}/geode-download-dependency.cmake)
+include(${CMAKE_CURRENT_BINARY_DIR}/geode-download-dependency.cmake)
+
+download_dependency_mod(elidianesampaiotrabuco/geode-sprite-frames-unity user95401.sprite-frames-unity FALSE)
+
 add_library(${PROJECT_NAME} SHARED
     src/main.cpp
     src/main.cpp
