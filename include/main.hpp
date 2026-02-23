@@ -225,7 +225,7 @@ auto func(auto par = def) { mem = par; return this; }
     class Manager : public cocos2d::CCNode {
     public:
         ConfigRegistry* m_registry = nullptr;
-        std::string m_implID = "";
+        geode::ZStringView m_implID = "";
 
         CREATE_FUNC(Manager);
 
